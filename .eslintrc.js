@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier','react','react-hooks'],
   extends: [
     'airbnb-typescript',    
     'plugin:prettier/recommended',
@@ -11,7 +11,10 @@ module.exports = {
     'prettier',
   ],
   rules: {    
-    'prettier/prettier': 0,        
+    'prettier/prettier': 0,
+    '@typescript-eslint/no-use-before-define': ["warn"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",     
     "import/extensions": [      
       'off'
    ],

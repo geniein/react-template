@@ -65,7 +65,7 @@ export default function Nav({ openNav, onCloseNav }: {openNav: boolean, onCloseN
         </Link>
       </Box>      
 
-      <NavSection data={[{"aa":"aa"}, {"aa":"aa"}]} />
+      <NavSection data={navConfig} />
 
       <Box sx={{ flexGrow: 1 }} />
 

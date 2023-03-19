@@ -8,11 +8,19 @@ import { StyledNavItem, StyledNavItemIcon } from './styles';
 
 // ----------------------------------------------------------------------
 
-export default function NavSection( data: any) {
-    console.log(data);
+type NavSec = {
+  title: string;
+  path: string;
+}
+
+interface IData{
+  data: Array<NavSec>,
+  [key:string]: any
+}
+
+export default function NavSection( {data = [], ...other}: IData) {  
   return (
-    // <Box {...other}>
-    <Box >
+    <Box {...other}>    
       <List disablePadding sx={{ p: 1 }}>
         {data.map((item: any) => (
           <NavItem key={item.title} item={item} />
